@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.company.spsolutions.gestosdecompras">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MenuPrincipal.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".SolicitudGasto.SolicitudActivity" />
+        <activity android:name=".SolicitudGasto.AddSolicitudActivity" />
+        <activity android:name=".Gastos.EvaluarGastoActivity" />
+        <activity android:name=".Gastos.AddGastoActivity" />
+        <activity android:name=".Gastos.GastosActivity" />
+        <activity android:name=".Informes.ResumenGastosActivity" />
+        <activity android:name=".Informes.BalanceGastosActivity" />
+        <activity android:name=".Informes.AprobarGastoActivity" />
+        <activity android:name=".Informes.AddInformeActivity" />
+        <activity android:name=".Informes.InformeActivity"></activity>
+    </application>
+
+</manifest>
