@@ -22,7 +22,6 @@
         </activity>
         <activity android:name=".Login.LoginActivity" />
         <activity android:name=".SolicitudGasto.AddSolicitudActivity" />
-        <activity android:name=".Gastos.EvaluarGastoActivity" />
         <activity android:name=".Gastos.AddGastoActivity" />
         <activity android:name=".Gastos.GastosActivity" />
         <activity android:name=".Informes.ResumenGastosActivity" />
