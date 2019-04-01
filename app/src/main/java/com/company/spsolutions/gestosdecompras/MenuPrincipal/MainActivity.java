@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 /*
 *Esta clase gestiona la vista principal del menu con las opciones
 * el método initComponents inicializa los componentes
-* el método setListeners coloca los listeners a cada componente que asi lo necesite y su logica correspondiente
+* el método setListeners coloca los listeners a cada opción de menú con su correspondiente intent y logica para mandar a la siguiente actividad
 *
  */
     @Override

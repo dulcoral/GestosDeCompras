@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".SolicitudGasto.SolicitudActivity"
+            android:label="@string/title_activity_solicitud"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".MenuPrincipal.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +21,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login.LoginActivity" />
-        <activity android:name=".SolicitudGasto.SolicitudActivity" />
         <activity android:name=".SolicitudGasto.AddSolicitudActivity" />
         <activity android:name=".Gastos.EvaluarGastoActivity" />
         <activity android:name=".Gastos.AddGastoActivity" />
@@ -26,7 +29,7 @@
         <activity android:name=".Informes.BalanceGastosActivity" />
         <activity android:name=".Informes.AprobarGastoActivity" />
         <activity android:name=".Informes.AddInformeActivity" />
-        <activity android:name=".Informes.InformeActivity"></activity>
+        <activity android:name=".Informes.InformeActivity" />
     </application>
 
 </manifest>

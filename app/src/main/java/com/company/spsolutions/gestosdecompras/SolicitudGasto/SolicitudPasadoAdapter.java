@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by coralRodriguez on 28/03/19.
+ * Created by coralRodriguez on 01/04/2019
  */
-public class SolicitudPasadosAdapter extends RecyclerView.Adapter<SolicitudPasadosAdapter.MyViewHolder> {
+public class SolicitudPasadoAdapter extends RecyclerView.Adapter<SolicitudPasadoAdapter.MyViewHolder>{
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -31,5 +31,4 @@ public class SolicitudPasadosAdapter extends RecyclerView.Adapter<SolicitudPasad
         }
 
     }
-
 }

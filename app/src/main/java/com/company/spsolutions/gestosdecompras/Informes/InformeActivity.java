@@ -12,6 +12,6 @@ public class InformeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_informe);
+        setContentView(R.layout.activity_informes);
     }
 }

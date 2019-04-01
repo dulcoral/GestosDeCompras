@@ -3,16 +3,67 @@ package com.company.spsolutions.gestosdecompras.Gastos;
  * Created by coralRodriguez on 28/03/19.
  */
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.company.spsolutions.gestosdecompras.R;
+import com.company.spsolutions.gestosdecompras.SolicitudGasto.SolicitudActivity;
 
 public class GastosActivity extends AppCompatActivity {
+    /*
+     * Esta clase es la vista principal de los gastos controla la vista de las gastos actuales y pasados
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gastos);
+    }
+
+
+    public static class PlaceholderFragment extends Fragment {
+        private static final String ARG_SECTION_NUMBER = "section_number";
+
+        public PlaceholderFragment() {
+        }
+
+        public static SolicitudActivity.PlaceholderFragment newInstance(int sectionNumber) {
+            SolicitudActivity.PlaceholderFragment fragment = new SolicitudActivity.PlaceholderFragment();
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            fragment.setArguments(args);
+            return fragment;
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_solicitud, container, false);
+            return rootView;
+        }
+    }
+
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return SolicitudActivity.PlaceholderFragment.newInstance(position + 1);
+        }
+
+        @Override
+        public int getCount() {
+            // 2.
+            return 2;
+        }
     }
 }
