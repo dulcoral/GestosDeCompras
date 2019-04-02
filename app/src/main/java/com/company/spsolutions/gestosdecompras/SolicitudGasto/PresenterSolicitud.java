@@ -6,6 +6,4 @@ public interface PresenterSolicitud {
     void displayError(String error);
     void displayLoader(boolean loader);
     void displayLabel();
-    void add();
-    void remove();
 }

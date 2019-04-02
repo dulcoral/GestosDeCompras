@@ -4,4 +4,7 @@ package com.company.spsolutions.gestosdecompras.SolicitudGasto;
  */
 
 public class SolicitudService {
+    /* Esta clase es la que se encargara de hacer consultas a firebase para las solicitudes
+    *
+     */
 }

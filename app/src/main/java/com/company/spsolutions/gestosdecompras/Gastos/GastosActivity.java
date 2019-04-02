@@ -15,15 +15,21 @@ import android.view.ViewGroup;
 import com.company.spsolutions.gestosdecompras.R;
 import com.company.spsolutions.gestosdecompras.SolicitudGasto.SolicitudActivity;
 
-public class GastosActivity extends AppCompatActivity {
+public class GastosActivity extends AppCompatActivity implements PresenterGastos {
     /*
      * Esta clase es la vista principal de los gastos controla la vista de las gastos actuales y pasados
+     * displayError se encarga de colocar error en caso que exista
      */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gastos);
+    }
+
+    @Override
+    public void displayError() {
+
     }
 
 

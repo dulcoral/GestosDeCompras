@@ -49,12 +49,10 @@ public class SolicitudActivity extends AppCompatActivity implements PresenterSol
 
     }
 
-    @Override
     public void add() {
 
     }
 
-    @Override
     public void remove() {
 
     }
