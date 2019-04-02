@@ -5,6 +5,7 @@ package com.company.spsolutions.gestosdecompras.Login;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
 import com.company.spsolutions.gestosdecompras.Login.PresenterLogin;
 import com.company.spsolutions.gestosdecompras.R;
@@ -23,7 +24,18 @@ public class LoginActivity extends AppCompatActivity  implements PresenterLogin 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("xRendir");
+        setSupportActionBar(toolbar);
+
     }
+
+
+    /*
+    Acciones del boton :
+    1. inicializar componentes de cajas de texto usuario, password y boton de ingresar
+    2. Implementar logica del metodo setlistener del boton ingresar
+    */
 
     public void initComponents(){
 

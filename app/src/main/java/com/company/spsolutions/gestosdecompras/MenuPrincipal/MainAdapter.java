@@ -5,30 +5,52 @@ package com.company.spsolutions.gestosdecompras.MenuPrincipal;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder>  {
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
-        public MyViewHolder(@NonNull View itemView) {
-            super(itemView);
-        }
+import com.company.spsolutions.gestosdecompras.R;
+import com.squareup.picasso.Picasso;
 
+import java.util.List;
+
+public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CardHolder> {
+    List<ItemMenu> itemsMenu;
+
+    public MainAdapter(List<ItemMenu> itemsMenu) {
+        this.itemsMenu = itemsMenu;
     }
 
-    @NonNull
     @Override
-    public MainAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return null;
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull MainAdapter.MyViewHolder myViewHolder, int i) {
-
+    public void onBindViewHolder(CardHolder cardHolder, int i) {
+        ItemMenu itemMenu = itemsMenu.get(i);
+        Picasso.get().load(itemMenu.image).into(cardHolder.imageIV);
+        cardHolder.titleTV.setText(itemMenu.title);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return itemsMenu.size();
     }
+
+    @Override
+    public CardHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_card, viewGroup, false);
+        return new CardHolder(itemView);
+    }
+
+
+    public static class CardHolder extends RecyclerView.ViewHolder {
+        public TextView titleTV;
+        public ImageView imageIV;
+
+        public CardHolder(View card) {
+            super(card);
+            titleTV = card.findViewById(R.id.textCard_tv);
+            imageIV = card.findViewById(R.id.imgCard_iv);
+        }
+    }
+
 }
