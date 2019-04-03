@@ -23,23 +23,13 @@ public class MainActivity extends AppCompatActivity {
  */
     private RecyclerView recyclerMenu;
     private MainAdapter mAdapter;
-    private RecyclerView.LayoutManager layoutManager;
+    private LinearLayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RecyclerView recList = findViewById(R.id.recycler_menu);
-        recList.setHasFixedSize(true);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        recList.setLayoutManager(llm);
-        MainAdapter ca = new MainAdapter(getData());
-        recList.setAdapter(ca);
-        //getActionBar().setTitle("xRendir");
-        //setSupportActionBar(toolbar);
-
-        //initComponents();
+        initComponents();
 
     }
 
@@ -47,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerMenu = findViewById(R.id.recycler_menu);
         recyclerMenu.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerMenu.setLayoutManager(layoutManager);
         mAdapter = new MainAdapter(getData());
         recyclerMenu.setAdapter(mAdapter);
